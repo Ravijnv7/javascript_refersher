@@ -25,5 +25,19 @@ hof(10,function exe(){
 
 const arr =[100,20,1,30,13,10000,4,5,6];
 
-arr.sort();
+/*
+
+* sort is also a higher order function which expects function as a argument 
+
+*   a-b is negative b>a the a is placed before b
+
+
+
+*/
+
+function sort1(a,b){
+    return a-b; 
+}
+
+arr.sort(sort1);
 console.log(arr)

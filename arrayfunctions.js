@@ -58,6 +58,31 @@ const arr=[1,2,3,4,5];
  function print(element,idx){
     return `Element is at index ${idx}is ${element}`
  }
+/*
+* here map is looping over every element
 
+* and then passing element and index of that particular element  in the function print
+
+
+*/
  const result2=newArray.map(print);
  console.log(result2)
+
+ /*
+
+ * making custom mapper function -> we will understand more when we will read 
+ * protype inheritance
+
+
+ */
+
+ function customMapper(arr,func){
+    let result=[];
+    for(let i=0;i<arr.length;i++){
+        result.push(func(arr[i],i))
+    }
+    return result;
+ }
+
+ const value= customMapper(newArray,print);
+ console.log(value);
